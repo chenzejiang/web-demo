@@ -1,0 +1,7 @@
+﻿var wx = {
+	cloud:{
+		database(){
+			
+		}
+	}
+}
