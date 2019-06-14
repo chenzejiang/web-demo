@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <meta name="Robots" content="All" />
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no, email=no" name="format-detection">
+    <link rel="stylesheet" href="css/base.css" type="text/css">
+    <style>
+        p{
+            width: 200px;
+            margin: 20px auto;
+        }
+        .single-line{
+            display:block;
+            white-space:nowrap; 
+            overflow:hidden; 
+            text-overflow:ellipsis;
+        }
+        .multi-line{
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:2;
+            text-overflow:-o-ellipsis-lastline;
+            overflow:hidden;
+            word-break:break-all;
+        }
+    </style>
+</head>
+<body>
+    <p class="single-line">单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行单行</p>
+    <p class="multi-line">多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行多行</p>
+</body>
+</html>
