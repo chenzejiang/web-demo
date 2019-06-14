@@ -1,0 +1,125 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>css3画常用图标</title>
+    <meta name="Robots" content="All" />
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no, email=no" name="format-detection">
+    <link rel="stylesheet" href="css/base.css" type="text/css">
+    <style>
+    .close-icon {
+        display:block;
+        width:22px;
+        height:22px;
+        background-color:#999999;
+        -moz-border-radius:20px;
+        -webkit-border-radius:20px;
+        -khtml-border-radius:20px;
+        border-radius:20px;
+        position:absolute;
+        top:10px;
+        left:14px;
+        overflow:hidden;
+        text-indent:-999px;
+        transform:rotate(45deg);
+        -ms-transform:rotate(45deg);
+        -moz-transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+        -o-transform:rotate(45deg);
+    }
+    .close-icon:after {
+        content:'';
+        display:block;
+        position:absolute;
+        left:50%;
+        top:50%;
+        width:50%;
+        height:0;
+        border-top:2px solid #d6d6d6;
+        transform:translate(-50%,-50%);
+        -moz-transform:translate(-50%,-50%);
+        -webkit-transform:translate(-50%,-50%);
+        -o-transform:translate(-50%,-50%);
+        -ms-transform:translate(-50%,-50%);
+    }
+    .close-icon:before {
+        content:'';
+        display:block;
+        position:absolute;
+        left:50%;
+        top:50%;
+        height:50%;
+        width:0;
+        border-left:2px solid #d6d6d6;
+        transform:translate(-50%,-50%);
+        -moz-transform:translate(-50%,-50%);
+        -webkit-transform:translate(-50%,-50%);
+        -o-transform:translate(-50%,-50%);
+        -ms-transform:translate(-50%,-50%);
+    }
+    /* 箭头 */
+    .arrows-icon {
+        display:block;
+        position:absolute;
+        top:8%;
+        right:2%;
+        width:24px;
+        height:24px;
+        z-index:30;
+        -webkit-transition:all 0.4s ease-out;
+    }
+    .arrows-icon:after {
+        content:'';
+        display:inline-block;
+        width:50%;
+        height:50%;
+        position:absolute;
+        top:50%;
+        left:50%;
+        -webkit-transform:translate(-50%,-50%) rotate(45deg);
+        -moz-transform:translate(-50%,-50%) rotate(45deg);
+        -ms-transform:translate(-50%,-50%) rotate(45deg);
+        -o-transform:translate(-50%,-50%) rotate(45deg);
+        transform:translate(-50%,-50%) rotate(45deg);
+    }
+    .arrows-left-icon{
+        left:0%;
+    }
+    .arrows-top-icon{
+        left:20%;
+    }
+    .arrows-right-icon{
+        left:40%;
+    }
+    .arrows-bottom-icon{
+        left:60%;
+    }
+    .arrows-left-icon:after{
+        border-right:2px solid #000;
+        border-top:2px solid #000;
+    }
+    .arrows-top-icon:after{
+        border-left:2px solid #000;
+        border-top:2px solid #000;
+    }
+    .arrows-right-icon:after{
+        border-left:2px solid #000;
+        border-bottom:2px solid #000;
+    }
+    .arrows-bottom-icon:after{
+        border-right:2px solid #000;
+        border-bottom:2px solid #000;
+    }
+    </style>
+</head>
+<body>
+    <div class="close-icon"></div>
+    <div class="arrows-icon arrows-left-icon"></div>
+    <div class="arrows-icon arrows-top-icon"></div>
+    <div class="arrows-icon arrows-right-icon"></div>
+    <div class="arrows-icon arrows-bottom-icon"></div>
+</body>
+</html>

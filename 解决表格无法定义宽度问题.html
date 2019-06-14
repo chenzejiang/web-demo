@@ -10,20 +10,49 @@
     <meta content="telephone=no, email=no" name="format-detection">
     <!--CSS-->
     <link rel="stylesheet" href="css/base.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
     <style type="text/css">
+      table{
+        table-layout: fixed;
+        margin: 200px auto;
+      }
+      table tr td{
+        border:1px solid #000;
+        text-align: center;
+      }
     </style>
 </head>
 <body>
     <table class="tg">
-      <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-      </tr>
+        <colgroup>
+        <col width="120">
+        <col width="335">
+        <col width="165">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        </colgroup>
+        <tr class="trHead">
+            <td>序号</td>
+            <td>项目名称</td>
+            <td>施工师傅</td>
+            <td>数量</td>
+            <td>单价(元)</td>
+            <td>小计(元)</td>
+        </tr>
+        <tr>
+            <td class="center">1</td>
+            <td>
+                <!---->工时费 </td>
+            <td></td>
+            <td class="center">1</td>
+            <td class="center">0</td>
+            <td class="center">0.00</td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+            <td class="center">小计金额</td>
+            <td colspan="2" class="center">0.00</td>
+        </tr>
     </table>
     <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
     <script src="js/base.js"></script>
