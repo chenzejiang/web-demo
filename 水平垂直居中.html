@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>水平垂直居中</title>
+    <meta name="Robots" content="All" />
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no, email=no" name="format-detection">
+    <link rel="stylesheet" href="css/base.css" type="text/css">
+    <style>
+        div{
+            width:100%;
+            height: 200px;
+            border: 5px solid #000;
+            margin-bottom: 20px;
+        }
+        .box-postion{
+            position: relative;
+        }
+        .box-postion p{
+            position:absolute;
+            top:50%;
+            left:50%;
+            -webkit-transform:translate(-50%,-50%);
+            -moz-transform:translate(-50%,-50%);
+            -ms-transform:translate(-50%,-50%);
+            -o-transform:translate(-50%,-50%);
+            transform:translate(-50%,-50%);
+        }
+
+        .box-flex{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        
+        .box-margin{
+            position: relative;
+        }
+        .box-margin p{
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            background: #eee;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-postion">
+        <p>absolute + translate</p>
+    </div>
+
+    <div class="box-flex">
+        <p>flex</p>
+    </div>
+
+    <div class="box-margin">
+        <p>absolute + margin</p>
+    </div>
+</body>
+</html>

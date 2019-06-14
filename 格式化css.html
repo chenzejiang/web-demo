@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <meta name="Robots" content="All" />
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no, email=no" name="format-detection">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/base.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <!--头部-->
+    <header class="header">
+
+    </header>
+    <!--内容-->
+    <section class="container">
+
+    </section>
+    <!--底部-->
+    <footer class="footer">
+
+    </footer>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var str = `
+            /* 这个是注释   */
+            body * { font-size:10pt; }    
+            p 
+            { clear:left; padding:5px 10px;
+            }
+            td,
+            fieldset
+            {   padding : 10px;  }
+            textarea { 
+                 width:90%;
+                 height:10em;
+            }`;
+
+            function cssCodeZip(_str){
+                this.S=function(){
+                    var code = _str;
+                    code=code.replace(/(\n|\t|\s)*/ig,'$1');
+                    code=code.replace(/\n|\t|\s(\{|\}|\,|\:|\;)/ig,'$1');
+                    code=code.replace(/(\{|\}|\,|\:|\;)\s/ig,'$1');
+                    return code;
+                }
+                this.multipleLines=function(){
+                    var code=this.S();
+                    code=code.replace(/(\{)/ig,' $1');
+                    code=code.replace(/(\{|\;)/ig,'$1\n\t');
+                    code=code.replace(/\t*(\})/ig,'$1\n');
+                    code=code.replace(/(\*\/)/ig,'$1\n');
+                    return code;
+                }
+                this.singleLine=function(){
+                    var code=this.S();
+                    code=code.replace(/(\})/ig,'$1\n');
+                    code=code.replace(/(\*\/)/ig,'$1\n');
+                    return code;
+                }
+            }
+            var code = new cssCodeZip(str);
+            console.log(code.singleLine());
+        })
+    </script>
+</body>
+</html>

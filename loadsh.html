@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>loadsh</title>
+    <meta name="Robots" content="All" />
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no, email=no" name="format-detection">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/base.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <script src="http://cdn.bootcss.com/lodash.js/4.17.12-pre/lodash.core.js"></script>
+    <script>
+        const arr = [{ 'name': 'a' },{'name': 'b'}];
+        console.log(arr); // [{name: "a", value: 123} {name: "b", value: 123}]
+        const newArr = _.forEach(arr, (item) => {
+            const obj = item;
+            obj.value = 123;
+            return obj;
+        });
+        console.log(newArr);  // [{name: "a", value: 123} {name: "b", value: 123}]
+    </script>
+    
+</body>
+</html>
