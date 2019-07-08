@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>grid布局学习</title>
+    <meta name="Robots" content="All" />
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no, email=no" name="format-detection">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/base.css" type="text/css">
+    <style type="text/css">
+        .container{
+            display: grid;
+            grid-template-columns: 200px 1fr 1fr 3fr;
+            grid-template-rows: 100px 100px;
+            grid-template-areas: "a1 merge merge a4"
+                                 "a5 merge merge a8"
+        }
+        .container div{
+            border:2px solid #000;
+            text-align: center;
+            line-height: 100px;
+            color:#f00;
+        }
+        .container div.a1{
+            grid-area: a1;
+        }
+        .container div.a2{
+            grid-area: a2;
+            background: #636363;
+            padding:5px;
+        }
+        .container div.a3{
+            grid-area: a3;
+        }
+        .container div.a4{
+            grid-area: a4;
+        }
+        .container div.a5{
+            grid-area: a5;
+        }
+        .container div.a6{
+            grid-area: a6;
+        }
+        .container div.a7{
+            grid-area: a7;
+        }
+        .container div.a8{
+            grid-area: a8;
+        }
+        .container div.merge{
+            grid-area: merge;
+            border: 3px solid yellow;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!--内容-->
+    <section class="container">
+        <div class="a1">1</div>
+        <div class="a2 merge">合并</div>
+        <div class="a3 merge"></div>
+        <div class="a4">4</div>
+        <div class="a5">5</div>
+        <div class="a6 merge"></div>
+        <div class="a7 merge"></div>
+        <div class="a8">8</div>
+    </section>
+</body>
+</html>
