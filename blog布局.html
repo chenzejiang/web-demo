@@ -12,25 +12,33 @@
     <link rel="stylesheet" href="css/base.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <style type="text/css">
-        .post-item {
+        body {
+            background: #f8f9fb;
+        }
+        .main {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .article {
           display: flex;
           justify-content: space-between;
-          padding: 32px 0;
-          max-height: 200px;
+          border-bottom:1px solid #d1d4d9;
+          font-size: 0;
+          padding: 30px 0;
         }
-        .post-item .content {
+        .article .article-content {
           flex: 1;
         }
-        .post-item .content .post-title {
+        .article .article-content .post-title {
           font-size: 22px;
           color: #0C1E29;
           display: inline-block;
+          font-weight: bold;
         }
-        .post-item .content .post-abstract {
+        .article .article-content .article-abstract {
           font-size: 14px;
-          margin: 16px 0 8px;
           flex: 1;
-          color: #4E616C;
+          color: #a0a5ab;
           line-height: 24px;
           position: relative;
           display: -webkit-box;
@@ -38,42 +46,45 @@
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
         }
-        .post-item .content .post-abstract strong {
+        .article .article-content .article-abstract strong {
           font-weight: bolder;
         }
-        .post-item .content .post-abstract a {
+        .article .article-content .article-abstract a {
           font-weight: 600;
           background: linear-gradient(180deg, transparent 70%, rgba(101, 125, 225, 0.4) 0);
         }
-        .post-item .content .post-abstract code {
-          padding: 0 3px;
-          margin: 0 2px;
-          background: rgba(195, 195, 195, 0.41);
-          font-size: 0.9em;
-          border-radius: 2px;
+        .article .article-time{
+            font-size: 16px;
+            color: #b4b9bd;
+            margin: 24px 0;
+            display: block; 
+        }
+        .article a .article-img {
+            margin-left: 16px;
+            flex-shrink: 0;
+            width: 300px;
+            height: 160px;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
         }
     </style>
 </head>
 <body>
-
-     <section class="post-item">
-         <div class="content"><a href="C:/Users/Administrator/Documents/Gridea/output/post/hello-gridea/index.html"><h2 class="post-title">Hello Gridea</h2></a>
-             <div class="post-abstract">
-                 <p>👏 欢迎使用 <strong>Gridea</strong> ！ <br> ✍️ <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-             </div>
-             <div class="post-info">
-                <span><i class="icon icon-calendar-outline"></i> 2018-12-12</span> 
-                <span><i class="icon icon-pricetags-outline"></i> 
-                <a href="C:/Users/Administrator/Documents/Gridea/output/tag/k8FfrPv3U/index.html">Gridea</a>
-                </span>
+    <section class="main">
+        <div class="article">
+            <div class="article-content">
+                <a href="C:/Users/Administrator/Documents/Gridea/output/post/hello-gridea/index.html"><h2 class="post-title">Hello Gridea</h2></a>
+                <i class="article-time">2018-12-12</i> 
+                <div class="article-abstract">
+                    <p>CDN的全称是 Content Delivery Network，即内容分发网络。CDN 是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN 的关键技术主要有内容存储和分发技术。—— 科学百科</p>
+                </div>
             </div>
-         </div>
-         <a href="C:/Users/Administrator/Documents/Gridea/output/post/hello-gridea/index.html">
-             <div class="feature-container">
-                 <img src="file:///C:/Users/Administrator/Documents/Gridea/output/post-images/hello-gridea.png">
-             </div>
-         </a>
-     </section>
-                  
+            <a href="C:/Users/Administrator/Documents/Gridea/output/post/hello-gridea/index.html">
+                <div class="article-img" style="background-image: url('file:///C:/Users/Administrator/Documents/Gridea/output/post-images/hello-gridea.png')"></div>
+            </a>
+        </div>
+    </section>
 </body>
 </html>
