@@ -1,0 +1,52 @@
+body {
+    color: #000;
+    background: #fff;
+    margin: 1.6cm;
+}
+
+@page {
+  size: A4;
+  /* 隐藏页头页脚 */
+  margin: 0;
+  
+}
+#pageHeader{
+  position: running(pageHeader);
+}
+
+.beforeHeader, .afterFooter {
+    display: block;
+}
+
+
+/* 左边距 
+@page :left {
+  /*margin-left: 0px;*/
+}
+
+
+
+/* 右边距 */
+@page :right {
+  /*margin-right: 0px;*/
+/*  @bottom-left {
+    margin: 10pt 0 30pt 0;
+    border-top: .25pt solid #666;
+    content: "Our Cats";
+    font-size: 9pt;
+    color: #333;
+  }*/
+}
+
+h1{
+}
+
+a {
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+/* /*在超链接后面添加带<http://XXX>的完整地址*/ */
+a[href^=http]:after {
+  content:" <" attr(href) "> ";
+}
